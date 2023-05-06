@@ -1,0 +1,121 @@
+header {
+
+    width: 1420px;
+    height: 100px;
+    background-color: rgb(130, 165, 24);
+    font-size: 30px;
+    font-weight: bolder;
+
+    color: rgb(245, 245, 112);
+
+    color: rgb(225, 225, 52);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 1420px;
+    height: 600px;
+}
+
+main {
+    width: 1420px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.rectangle {
+    width: 140px;
+    height: 180px;
+    border: 1px solid rgba(163, 187, 7, 0.803);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 18px -13px 8px 3px rgba(163, 187, 7, 0.803);
+    cursor: pointer;
+}
+
+
+.rectangle:hover {
+    transform: scale(1.2);
+    background-color: rgba(163, 187, 7, 0.803);
+}
+
+footer {
+    width: 1420px;
+    height: 100px;
+    background-color: rgb(130, 165, 24);
+    font-size: 15px;
+    font-weight: bolder;
+    color: rgb(245, 245, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+@media (min-width: 320px) and (max-width: 372px) {
+
+    header {
+        width: 310px;
+        font-size: 25px;
+    }
+
+    main {
+        width: 300px;
+        height: 150px;
+
+    }
+
+    .rectangle {
+        width: 90px;
+        height: 120px;
+        font-size: 10px;
+        box-shadow: 3px -3px 2px 1px rgba(163, 187, 7, 0.803);
+    }
+
+    footer {
+        width: 310px;
+        height: 130px;
+        text-align: center;
+    }
+}
+
+@media(min-width:768px) and (max-width:1280px) {
+    header {
+        width: 400px;
+        font-size: 20px;
+    }
+
+    .rectangle {
+        width: 100px;
+        height: 120px;
+        font-size: 10px;
+        box-shadow: 3px -3px 2px 1px rgba(163, 187, 7, 0.803);
+    }
+
+    main {
+        width: 400px;
+        height: 400px;
+        flex-direction: column;
+    }
+
+    footer {
+        width: 400px;
+        font-size: 10px;
+        align-items: center;
+    }
+}
+
+.rectangle:hover{
+    transform:scale(1.2);
+    background-color:rgba(163, 187, 7, 0.803);
+}
+
