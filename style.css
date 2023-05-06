@@ -5,7 +5,11 @@ header {
     background-color: rgb(130, 165, 24);
     font-size: 30px;
     font-weight: bolder;
+
     color: rgb(245, 245, 112);
+
+    color: rgb(225, 225, 52);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +40,7 @@ main {
     box-shadow: 18px -13px 8px 3px rgba(163, 187, 7, 0.803);
     cursor: pointer;
 }
+
 
 .rectangle:hover {
     transform: scale(1.2);
@@ -108,3 +113,9 @@ footer {
         align-items: center;
     }
 }
+
+.rectangle:hover{
+    transform:scale(1.2);
+    background-color:rgba(163, 187, 7, 0.803);
+}
+
