@@ -114,8 +114,7 @@ footer {
     }
 }
 
-.rectangle:hover{
-    transform:scale(1.2);
-    background-color:rgba(163, 187, 7, 0.803);
+.rectangle:hover {
+    transform: scale(1.2);
+    background-color: rgba(163, 187, 7, 0.803);
 }
-
