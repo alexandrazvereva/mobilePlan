@@ -118,3 +118,20 @@ footer {
     transform: scale(1.2);
     background-color: rgba(163, 187, 7, 0.803);
 }
+.modal {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    position: absolute;
+    top: 36%;
+    left: 36%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+
+}
+
+.modal-active {
+    opacity: 1;
+    pointer-events: auto;
+}
