@@ -118,13 +118,14 @@ footer {
     transform: scale(1.2);
     background-color: rgba(163, 187, 7, 0.803);
 }
+
 .modal {
     width: 350px;
     height: 350px;
     margin: 0 auto;
     position: absolute;
-    top: 36%;
-    left: 36%;
+    top: 13%;
+    left: 7%;
     opacity: 0;
     pointer-events: none;
     transition: 1s;
@@ -132,6 +133,42 @@ footer {
 }
 
 .modal-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal_two {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    position: absolute;
+    top: 13%;
+    left: 40%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+
+}
+
+.modal_two-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal_three {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    position: absolute;
+    top: 13%;
+    left: 73%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+
+}
+
+.modal_three-active {
     opacity: 1;
     pointer-events: auto;
 }
