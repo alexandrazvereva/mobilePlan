@@ -1,14 +1,3 @@
-const video = document.querySelector(".video");
-const video_two = document.querySelector(".video_two");
-const video_three = document.querySelector(".video_three");
-const modal = document.querySelector(".modal");
-const modal_two = document.querySelector(".modal_two");
-const modal_three = document.querySelector(".modal_three");
-const videoPlanOne = document.querySelector(".plan_one");
-const videoPlanTwo = document.querySelector(".plan_two");
-const videoPlanThree = document.querySelector(".plan_three");
-
-
 //videoPlanOne.addEventListener("click", () => { //"mousemove"
 // modal.classList.add("modal-active");
 // modal.classList.toggle("modal-active");
@@ -75,23 +64,70 @@ PLANS.forEach((element, index) => {
     calls.innerHTML = PLANS[index].internet + " GB, " + PLANS[index].calls + " minutes ";
     //let price = document.querySelector("#price")
     price.innerHTML = "$" + PLANS[index].price;
+    info.innerHTML = PLANS[index].info;
 
 }
 )
 
-let button=document.querySelectorAll(".button-plan");
 
-button.forEach(element=>element.addEventListener("click", function (){
-    console.log("drfghj")
-}
-));
+PLANS.forEach((element, index) => {
+    //let window = document.createElement("div");
+    // window.classList.add("modal");
+    let info = document.querySelector("#info");
+    info.classList.add("info");
+    //let info=document.createElement("p");
+    let bonus = document.querySelector("#bonus");
+    bonus.classList.add("bonus")
 
-let info=document.querySelector("#info")
-info.innerHTML=PLANS[0].info;
-let bonus=document.querySelector("#bonus")
-bonus.innerHTML=PLANS[0].bonus;
+    bonus.innerHTML = PLANS[index].bonus;
+    info.innerHTML = PLANS[index].info;
+
+})
 
 
+
+
+
+let button = document.querySelectorAll(".button-plan");
+//let closeButton=document.querySelectorAll(".button_modal");
+let modal = document.querySelector(".modal");
+
+
+
+
+button.forEach(element => element.addEventListener("click", function () {
+    //console.log("drfghj")
+
+    modal.classList.add("modal-active")
+}));
+
+let buttonClose = document.querySelector(".button-close");
+//buttonClose.forEach(element => element.addEventListener("click", function () {
+//console.log("drfghj")
+
+// modal.classList.remove("modal-active")
+//}));
+
+let isModalShown = false;
+
+buttonClose.addEventListener("click", () => {
+    isModalShown = !isModalShown
+    if (isModalShown === false) {
+        document.body.style.overflowY = "scroll";
+
+        console.log(isModalShown)
+    }
+    else {
+        document.body.style.overflowY = "hidden";
+
+        console.log(isModalShown)
+    }
+
+    // modal.classList.add("modal-active");
+    modal.classList.toggle("modal-active");
+    //video.play();
+    //video.pause();
+});
 
 
 
