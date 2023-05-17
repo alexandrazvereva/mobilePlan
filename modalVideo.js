@@ -13,8 +13,6 @@
 // modal_three.classList.toggle("modal_three-active");
 
 //});
-
-
 const PLANS = [
     {
         planName: "Simple",
@@ -45,19 +43,36 @@ const PLANS = [
 PLANS.forEach((element, index) => {
     let card = document.createElement("div");
     card.classList.add("rectangle");
+
     let title = document.createElement("h2");
     title.classList.add("title");
+
     let calls = document.createElement("p");
     calls.classList.add("calls");
+
     let price = document.createElement("p");
     price.classList.add("price");
+
     let button = document.createElement("button");
     button.classList.add("button-plan");
     button.innerHTML = "More info";
     card.append(title, calls, price, button)
 
     let main = document.querySelector(".main");
-    main.appendChild(card);
+
+   
+
+    let modal = document.querySelector(".modal");
+  
+  
+    let info = document.createElement("p");
+    info.classList.add("info");
+    let bonus = document.createElement("p");
+    bonus.classList.add("bonus");
+    modal.append(info,bonus);
+    main.append(card,modal);
+
+
     //let title = document.querySelector("#title")
     title.innerHTML = PLANS[index].planName;
     //let calls = document.querySelector("#calls");
@@ -65,24 +80,26 @@ PLANS.forEach((element, index) => {
     //let price = document.querySelector("#price")
     price.innerHTML = "$" + PLANS[index].price;
     info.innerHTML = PLANS[index].info;
+    bonus.innerHTML = PLANS[index].bonus;
+
 
 }
 )
 
+//
+//PLANS.forEach((element, index) => {
+//let window = document.createElement("div");
+// window.classList.add("modal");
+//  let info = document.querySelector("#info");
+//info.classList.add("info");
+//let info=document.createElement("p");
+//let bonus = document.querySelector("#bonus");
+//bonus.classList.add("bonus")
 
-PLANS.forEach((element, index) => {
-    //let window = document.createElement("div");
-    // window.classList.add("modal");
-    let info = document.querySelector("#info");
-    info.classList.add("info");
-    //let info=document.createElement("p");
-    let bonus = document.querySelector("#bonus");
-    bonus.classList.add("bonus")
+//bonus.innerHTML = PLANS[0].bonus;
+//info.innerHTML = PLANS[0].info;
 
-    bonus.innerHTML = PLANS[index].bonus;
-    info.innerHTML = PLANS[index].info;
-
-})
+//})
 
 
 
