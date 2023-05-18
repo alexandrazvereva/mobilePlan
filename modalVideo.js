@@ -55,22 +55,19 @@ PLANS.forEach((element, index) => {
 
     let button = document.createElement("button");
     button.classList.add("button-plan");
+    button.setAttribute("id", index);
+
     button.innerHTML = "More info";
     card.append(title, calls, price, button)
 
     let main = document.querySelector(".main");
 
-   
 
-    let modal = document.querySelector(".modal");
-  
-  
-    let info = document.createElement("p");
-    info.classList.add("info");
-    let bonus = document.createElement("p");
-    bonus.classList.add("bonus");
-    modal.append(info,bonus);
-    main.append(card,modal);
+
+
+
+
+    main.appendChild(card);
 
 
     //let title = document.querySelector("#title")
@@ -79,12 +76,23 @@ PLANS.forEach((element, index) => {
     calls.innerHTML = PLANS[index].internet + " GB, " + PLANS[index].calls + " minutes ";
     //let price = document.querySelector("#price")
     price.innerHTML = "$" + PLANS[index].price;
-    info.innerHTML = PLANS[index].info;
-    bonus.innerHTML = PLANS[index].bonus;
+
 
 
 }
 )
+function createModal() {
+    let modal = document.querySelector(".modal");
+
+
+    let info = document.createElement("p");
+    info.classList.add("info");
+    let bonus = document.createElement("p");
+    bonus.classList.add("bonus");
+    modal.append(info, bonus);
+    document.querySelector(".main").appendChild(modal);
+
+};
 
 //
 //PLANS.forEach((element, index) => {
@@ -112,11 +120,22 @@ let modal = document.querySelector(".modal");
 
 
 
-button.forEach(element => element.addEventListener("click", function () {
-    //console.log("drfghj")
+button.forEach(element => element.addEventListener("click", function (event) {
+    // console.log(event.target.id)
+    createModal();
+    updateModal(event.target.id); //kuda najal
+
+    document.body.style.backgroundColor = "#ebf0dd";
 
     modal.classList.add("modal-active")
 }));
+
+function updateModal(currentPlan) {
+
+
+    document.querySelector(".info").innerHTML = PLANS[currentPlan].info;
+    document.querySelector(".bonus").innerHTML = PLANS[currentPlan].bonus;
+}
 
 let buttonClose = document.querySelector(".button-close");
 //buttonClose.forEach(element => element.addEventListener("click", function () {
@@ -128,22 +147,11 @@ let buttonClose = document.querySelector(".button-close");
 let isModalShown = false;
 
 buttonClose.addEventListener("click", () => {
-    isModalShown = !isModalShown
-    if (isModalShown === false) {
-        document.body.style.overflowY = "scroll";
 
-        console.log(isModalShown)
-    }
-    else {
-        document.body.style.overflowY = "hidden";
 
-        console.log(isModalShown)
-    }
+    document.body.style.backgroundColor = "transparent";
+    modal.classList.remove("modal-active");
 
-    // modal.classList.add("modal-active");
-    modal.classList.toggle("modal-active");
-    //video.play();
-    //video.pause();
 });
 
 
