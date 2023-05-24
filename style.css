@@ -1,7 +1,7 @@
 header {
-    height: 100px;
+    height: 15%;
     background-color: rgb(130, 165, 24);
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bolder;
     color: rgb(245, 245, 112);
     color: rgb(225, 225, 52);
@@ -11,7 +11,7 @@ header {
 }
 
 body {
-    height: 100vh;
+    height: 98vh;
     margin: 0;
     overflow-y: scroll;
     transition: 1s;
@@ -44,9 +44,9 @@ main {
 
 footer {
 
-    height: 100px;
+    height: 15%;
     background-color: rgb(130, 165, 24);
-    font-size: 15px;
+    font-size: 23px;
     font-weight: bolder;
     color: rgb(245, 245, 112);
     display: flex;
@@ -148,6 +148,7 @@ footer {
 
         height: 130px;
         text-align: center;
+        font-size: 15px;
     }
 }
 
@@ -166,24 +167,30 @@ footer {
 
 }
 
-@media(min-width:768px) and (max-width:1280px) {
-    header {
-        font-size: 25px;
+@media (min-width: 630px) and (max-width: 1098px) {
+    .modal {
+        width: 350px;
+        height: 350px;
     }
 
-    .rectangle {
-        width: 100px;
-        height: 120px;
-        font-size: 10px;
-        box-shadow: 3px -3px 2px 1px rgba(163, 187, 7, 0.803);
-    }
+    @media(min-width:768px) and (max-width:1280px) {
+        header {
+            font-size: 25px;
+        }
 
-    main {
-        flex-wrap: wrap;
-    }
+        .rectangle {
+            width: 100px;
+            height: 120px;
+            font-size: 10px;
+            box-shadow: 3px -3px 2px 1px rgba(163, 187, 7, 0.803);
+        }
 
-    footer {
-        font-size: 15px;
-        text-align: center;
+        main {
+            flex-wrap: wrap;
+        }
+
+        footer {
+            font-size: 15px;
+            text-align: center;
+        }
     }
-}
