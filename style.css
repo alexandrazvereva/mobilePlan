@@ -1,21 +1,16 @@
 header {
-
     height: 100px;
     background-color: rgb(130, 165, 24);
     font-size: 30px;
     font-weight: bolder;
-
     color: rgb(245, 245, 112);
-
     color: rgb(225, 225, 52);
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 body {
-
     height: 100vh;
     margin: 0;
     overflow-y: scroll;
@@ -23,12 +18,10 @@ body {
 }
 
 main {
-
     height: 70%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .rectangle {
@@ -43,7 +36,6 @@ main {
     cursor: pointer;
     transition: 1s;
 }
-
 
 .rectangle:hover {
     transform: scale(1.2);
@@ -62,10 +54,7 @@ footer {
     align-items: center;
     flex-direction: column;
     padding: 7px;
-
 }
-
-
 
 .rectangle:hover {
     transform: scale(1.2);
@@ -91,13 +80,9 @@ footer {
     opacity: 0;
     visibility: hidden;
     background-color: white;
-
-
-
 }
 
 .modal-active {
-
     pointer-events: auto;
     opacity: 100;
     visibility: visible;
@@ -109,16 +94,13 @@ footer {
     padding: 5px;
     border-radius: 8%;
     background-color: rgb(245, 245, 112);
-
 }
 
 .button-plan:hover {
     cursor: pointer;
-
 }
 
 .button-plan:active {
-
     transform: scale(105%);
 }
 
@@ -137,13 +119,11 @@ footer {
 
 .button-close {
     cursor: pointer;
-
 }
 
 @media (min-width: 320px) and (max-width: 372px) {
 
     header {
-
         font-size: 25px;
     }
 
@@ -183,12 +163,11 @@ footer {
     .modal {
         left: 15%;
     }
-    
+
 }
 
 @media(min-width:768px) and (max-width:1280px) {
     header {
-
         font-size: 25px;
     }
 
@@ -200,12 +179,10 @@ footer {
     }
 
     main {
-
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
     }
 
     footer {
-
         font-size: 15px;
         text-align: center;
     }
