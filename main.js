@@ -36,7 +36,7 @@ PLANS.forEach((element, index) => {
     price.classList.add("price");
     let button = document.createElement("button");
     button.classList.add("button-plan");
-    button.setAttribute("id", index);
+    button.setAttribute("id", `plan-${index}`);
     button.innerHTML = "More info";
     card.append(title, calls, price, button)
     let main = document.querySelector(".main");
@@ -64,6 +64,8 @@ button.forEach(element => element.addEventListener("click", function (event) {
     modal.classList.add("modal-active")
 }));
 function updateModal(currentPlan) {
+    currentPlan = currentPlan.split("-").pop();
+    console.log(currentPlan);
     document.querySelector(".info").innerHTML = PLANS[currentPlan].info;
     document.querySelector(".bonus").innerHTML = PLANS[currentPlan].bonus;
 }
