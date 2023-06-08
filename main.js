@@ -48,12 +48,23 @@ PLANS.forEach((element, index) => {
 )
 function createModal() {
     let modal = document.querySelector(".modal");
+    while (modal.firstChild) { modal.removeChild(modal.firstChild) }
+    let buttonX = document.createElement("button");
+    buttonX.classList.add("button-close");
+    buttonX.innerHTML = "X";
     let info = document.createElement("p");
     info.classList.add("info");
     let bonus = document.createElement("p");
     bonus.classList.add("bonus");
-    modal.append(info, bonus);
+
+    buttonX.addEventListener("click", () => {
+        document.body.style.backgroundColor = "transparent";
+        modal.classList.remove("modal-active");
+    });
+
+    modal.append(buttonX, info, bonus);
     document.querySelector(".main").appendChild(modal);
+
 };
 let button = document.querySelectorAll(".button-plan");
 let modal = document.querySelector(".modal");
@@ -69,13 +80,7 @@ function updateModal(currentPlan) {
     document.querySelector(".info").innerHTML = PLANS[currentPlan].info;
     document.querySelector(".bonus").innerHTML = PLANS[currentPlan].bonus;
 }
-let buttonClose = document.querySelector(".button-close");
+
 let isModalShown = false;
-buttonClose.addEventListener("click", () => {
-    document.body.style.backgroundColor = "transparent";
-    modal.classList.remove("modal-active");
-});
-
-
 
 
